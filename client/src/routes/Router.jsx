@@ -59,23 +59,20 @@ export default function Router() {
         path="/signup/complete"
         element={isLogin ? <Navigate to="/" /> : <SignupComplete />}
       />
-      <Route
-        path="/myinfo"
-        element={isLogin ? <MyInfo /> : <Navigate to="/login" />}
-      />
+      <Route path="/myinfo" element={isLogin ? <MyInfo /> : <Login />} />
       <Route
         path="/myinfo/edit"
-        element={isLogin ? <EditMyInfo /> : <Navigate to="/login" />}
+        element={isLogin ? <EditMyInfo /> : <Login />}
       />
       <Route
         path="/myinfo/edit/password"
-        element={isLogin ? <EditPassword /> : <Navigate to="/login" />}
+        element={isLogin ? <EditPassword /> : <Login />}
       />
       <Route path="/email/complete" element={<CompleteEmail />} />
       <Route path="/email/confirm" element={<ConfirmEmail />} />
       <Route
         path="/email/request"
-        element={isLogin ? <RequestEmail /> : <Navigate to="/login" />}
+        element={isLogin ? <RequestEmail /> : <Login />}
       />
       <Route path="/email/send" element={<SendEmail />} />
       <Route
@@ -85,7 +82,7 @@ export default function Router() {
       <Route path="/email/send/password" element={<FindPassword />} />
       <Route
         path="/cart/payment/:orderId"
-        element={isLogin ? <Payment /> : <Navigate to="/login" />}
+        element={isLogin ? <Payment /> : <Login />}
       />
       <Route path="/*" element={<Error />} />
     </Routes>

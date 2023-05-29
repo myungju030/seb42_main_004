@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { setEmail } from '../../reducers/authReducer';
+import { setEmail } from '../../reducers/userReducer';
 import postData from '../../util/postData';
 import useValid from '../../util/useValid';
 import GetTemplate from '../commons/GetTemplate';

@@ -11,7 +11,8 @@ import useGET from '../util/useGET';
 import useFilterSearch from '../util/useFilterSearch';
 
 function AllBoxes() {
-  const { user, admin } = useSelector((state) => state.authReducer);
+  const { admin } = useSelector((state) => state.authReducer);
+  const { name } = useSelector((state) => state.userReducer);
   const [toFilterSearchDiv, notFoundWord, paginationUrl, uri] =
     useFilterSearch(true);
   const [res, isPending, error, getData] = useGET(uri);
@@ -26,9 +27,7 @@ function AllBoxes() {
     >
       <MealBoxesWrapDiv className="margininside">
         {!admin && <BannerLink />}
-        <h1>
-          {user?.name && `${user.name}님 `}오늘도 건강한 하루되세요(｡•̀ᴗ-)✧
-        </h1>
+        <h1>{name && `${name}님 `}오늘도 건강한 하루되세요(｡•̀ᴗ-)✧</h1>
         <FilterSearchDiv
           placeholder="healthy day 밀박스"
           {...toFilterSearchDiv}

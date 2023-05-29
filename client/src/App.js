@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { setProfile, setEmail } from './reducers/userReducer';
+import { setProfile } from './reducers/userReducer';
 import { setAuth } from './reducers/authReducer';
 import getData from './util/getData';
 import parseToken from './util/parseToken';
@@ -15,18 +15,17 @@ function App() {
   useEffect(() => {
     let logoutTimer;
     if (accessToken) {
-      const { exp, principal, roles } = parseToken(accessToken);
+      const { exp, roles } = parseToken(accessToken);
       dispatch(
         setAuth({
           isLogin: true,
-          accessToken: accessToken,
-          user: principal,
           admin: roles.includes('ADMIN'),
         })
       );
-      dispatch(setEmail(''));
       getData('/users').then((data) => {
-        dispatch(setProfile({ imagePath: data.imagePath, name: data.name }));
+        dispatch(
+          setProfile({ imagePath: data.imagePath, name: data.name, email: '' })
+        );
       });
       const remainingTime = Math.floor(
         (new Date(exp * 1000).getTime() - new Date().getTime()) / (60 * 1000)

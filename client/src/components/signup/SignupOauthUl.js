@@ -73,14 +73,10 @@ function SignupOauthUl() {
 
   const Auth = () => {
     return new Promise((resolve) => {
-      const { principal, roles } = parseToken(
-        localStorage.getItem('accessToken')
-      );
+      const { roles } = parseToken(localStorage.getItem('accessToken'));
       dispatch(
         setAuth({
           isLogin: true,
-          accessToken: localStorage.getItem('accessToken'),
-          user: principal,
           admin: roles.includes('ADMIN'),
         })
       );

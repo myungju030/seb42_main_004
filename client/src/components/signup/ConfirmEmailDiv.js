@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import GetTemplate from '../commons/GetTemplate';
 
 function ConfirmEmailDiv({ pathName }) {
-  const { email } = useSelector((state) => state.authReducer);
+  const { email } = useSelector((state) => state.userReducer);
   const location = useLocation();
   const sendEmail = location.state?.sendEmail || '';
 

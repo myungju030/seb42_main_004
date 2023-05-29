@@ -3,7 +3,7 @@ import SurveyPage2 from './SurveyPage2';
 import SurveyPage3 from './SurveyPage3';
 import { useSelector } from 'react-redux';
 function SurveyArticle({ page }) {
-  let { name } = useSelector((state) => state.authReducer.user);
+  let { name } = useSelector((state) => state.userReducer);
   switch (page) {
     case 1:
       return <SurveyPage1 />;

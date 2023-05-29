@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HiOutlineMail } from '@react-icons/all-files/hi/HiOutlineMail.esm';
+import { HiOutlineMail } from 'react-icons/hi';
 import GetTemplate from '../commons/GetTemplate';
 import EmailDiv from '../myInfo/EmailDiv';
 

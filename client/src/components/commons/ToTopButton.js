@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import { VscTriangleUp } from '@react-icons/all-files/vsc/VscTriangleUp.esm';
+import { VscTriangleUp } from 'react-icons/vsc';
 import checkFooter from '../../util/checkFooter';
 
 function ToTopButton() {

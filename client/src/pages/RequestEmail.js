@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import RequestEmailDiv from '../components/signup/RequestEmailDiv';
 
 function RequestEmail() {
-  const { email } = useSelector((state) => state.authReducer.user);
+  const { email } = useSelector((state) => state.useReducer);
 
   return (
     <ContainerDiv className="margininside">

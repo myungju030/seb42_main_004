@@ -1,6 +1,6 @@
-import { FaShoppingBasket } from '@react-icons/all-files/fa/FaShoppingBasket.esm';
+import { FaShoppingBasket } from 'react-icons/fa';
 import styled from 'styled-components';
-import { GoNote } from '@react-icons/all-files/go/GoNote.esm';
+import { GoNote } from 'react-icons/go';
 import { useLocation } from 'react-router-dom';
 function Empty() {
   let location = useLocation();

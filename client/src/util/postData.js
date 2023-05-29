@@ -1,14 +1,8 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
 async function postData(url, data) {
   try {
-    const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}${url}`,
-      data,
-      {
-        withCredentials: true,
-      }
-    );
+    const response = await apiClient.post(url, data);
     return response;
   } catch (error) {
     return error.response;

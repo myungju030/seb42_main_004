@@ -2,9 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import { useGoogleLogin } from '@react-oauth/google';
 import styled from 'styled-components';
 import axios from 'axios';
-import { FcGoogle } from '@react-icons/all-files/fc/FcGoogle.esm';
+import { FcGoogle } from 'react-icons/fc';
 import postData from '../../util/postData';
-import setAuthorizationToken from '../../util/setAuthorizationToken';
 import parseToken from '../../util/parseToken';
 import { setAuth } from '../../reducers/authReducer';
 import getData from '../../util/getData';
@@ -23,7 +22,6 @@ function GoogleButton() {
   const login = async (token) => {
     if (!localStorage.getItem('accessToken')) {
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     } else if (
@@ -32,7 +30,6 @@ function GoogleButton() {
     ) {
       localStorage.removeItem('accessToken');
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     }
@@ -40,14 +37,10 @@ function GoogleButton() {
 
   const Auth = () => {
     return new Promise((resolve) => {
-      const { principal, roles } = parseToken(
-        localStorage.getItem('accessToken')
-      );
+      const { roles } = parseToken(localStorage.getItem('accessToken'));
       dispatch(
         setAuth({
           isLogin: true,
-          accessToken: localStorage.getItem('accessToken'),
-          user: principal,
           admin: roles.includes('ADMIN'),
         })
       );

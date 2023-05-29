@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { HiOutlineMailOpen } from '@react-icons/all-files/hi/HiOutlineMailOpen.esm';
+import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import GetTemplate from '../commons/GetTemplate';
 
 function ConfirmEmailDiv({ pathName }) {
-  const { email } = useSelector((state) => state.authReducer);
+  const { email } = useSelector((state) => state.userReducer);
   const location = useLocation();
   const sendEmail = location.state?.sendEmail || '';
 

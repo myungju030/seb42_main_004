@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import apiClient from './apiClient';
 
 const useGET = (url) => {
   const [res, setRes] = useState('');
@@ -8,9 +8,7 @@ const useGET = (url) => {
 
   const getData = async () => {
     try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}${url}`
-      );
+      const response = await apiClient.get(url);
       setRes(response.data);
       setIsPending(false);
     } catch (err) {

@@ -8,7 +8,6 @@ import { setProfile } from '../../reducers/userReducer';
 import getData from '../../util/getData';
 import parseToken from '../../util/parseToken';
 import postData from '../../util/postData';
-import setAuthorizationToken from '../../util/setAuthorizationToken';
 import useValid from '../../util/useValid';
 import GetTemplate from '../commons/GetTemplate';
 import LoginButton from '../login/LoginButton';
@@ -59,7 +58,6 @@ function SignupOauthUl() {
   const login = async (token) => {
     if (!localStorage.getItem('accessToken')) {
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     } else if (
@@ -68,7 +66,6 @@ function SignupOauthUl() {
     ) {
       localStorage.removeItem('accessToken');
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     }
@@ -76,14 +73,10 @@ function SignupOauthUl() {
 
   const Auth = () => {
     return new Promise((resolve) => {
-      const { principal, roles } = parseToken(
-        localStorage.getItem('accessToken')
-      );
+      const { roles } = parseToken(localStorage.getItem('accessToken'));
       dispatch(
         setAuth({
           isLogin: true,
-          accessToken: localStorage.getItem('accessToken'),
-          user: principal,
           admin: roles.includes('ADMIN'),
         })
       );

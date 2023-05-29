@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { setAuth, setEmail } from '../reducers/authReducer';
+import { setAuth } from '../reducers/authReducer';
 import { initializeCart } from '../reducers/cartReducer';
 import { setProfile } from '../reducers/userReducer';
 
@@ -12,13 +12,10 @@ function useInitialize() {
       dispatch(
         setAuth({
           isLogin: false,
-          accessToken: '',
-          user: {},
           roles: [],
         })
       );
-      dispatch(setEmail(''));
-      dispatch(setProfile({ imagePath: null, name: '' }));
+      dispatch(setProfile({ imagePath: null, name: '', email: '' }));
       dispatch(initializeCart());
       resolve();
     });

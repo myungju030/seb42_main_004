@@ -9,7 +9,7 @@ import EmailDiv from './EmailDiv';
 import DeliveryDiv from './DeliveryDiv';
 import deleteData from '../../util/deleteData';
 import { useDispatch } from 'react-redux';
-import { setAuth, setEmail } from '../../reducers/authReducer';
+import { setAuth } from '../../reducers/authReducer';
 import { initializeCart } from '../../reducers/cartReducer';
 import ProfileImg from './ProfileImg';
 import PasswordDiv from './PasswordDiv';
@@ -143,13 +143,12 @@ function MyInfoUl({ pathName }) {
                       dispatch(
                         setAuth({
                           isLogin: false,
-                          accessToken: '',
-                          user: {},
                           roles: [],
                         })
                       );
-                      dispatch(setEmail(''));
-                      dispatch(setProfile({ imagePath: null, name: '' }));
+                      dispatch(
+                        setProfile({ imagePath: null, name: '', email: '' })
+                      );
                       dispatch(initializeCart());
                       window.location.reload();
                     });

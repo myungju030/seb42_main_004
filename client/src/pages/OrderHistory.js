@@ -9,7 +9,6 @@ import TabBar from '../components/commons/TabBar';
 import Empty from '../components/commons/Empty';
 function OrderHistory() {
   let { admin } = useSelector((state) => state.authReducer);
-
   let [page, setPage] = useState(1);
   let [totalPages, setTotalPages] = useState(1);
   let [data, setData] = useState([]);

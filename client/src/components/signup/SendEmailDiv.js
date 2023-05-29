@@ -14,7 +14,7 @@ function SendEmailDiv({ pathName }) {
     isValid: false,
   });
   const navigate = useNavigate();
-  const { email } = useSelector((state) => state.authReducer);
+  const { email } = useSelector((state) => state.userReducer);
 
   const handleChange = (e) => {
     setSendEmail(e.target.value);

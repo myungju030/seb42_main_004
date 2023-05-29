@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { BsFillCircleFill as Dot } from '@react-icons/all-files/bs/BsFillCircleFill.esm';
+import { BsFillCircleFill as Dot } from 'react-icons/bs';
 import styled from 'styled-components';
 import SurveyArticle from '../components/survey/SurveyArticle';
 

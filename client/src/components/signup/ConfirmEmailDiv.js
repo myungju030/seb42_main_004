@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { HiOutlineMailOpen } from '@react-icons/all-files/hi/HiOutlineMailOpen.esm';
+import { HiOutlineMailOpen } from 'react-icons/hi';
 import { MdOutlineMarkEmailRead } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';

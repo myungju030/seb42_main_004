@@ -1,14 +1,8 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
 async function patchData(url, data) {
   try {
-    const response = await axios.patch(
-      `${process.env.REACT_APP_API_URL}${url}`,
-      data,
-      {
-        withCredentials: true,
-      }
-    );
+    const response = await apiClient.patch(url, data);
     return response;
   } catch (error) {
     return error.response;

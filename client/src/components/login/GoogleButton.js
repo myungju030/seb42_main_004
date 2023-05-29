@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { FcGoogle } from 'react-icons/fc';
 import postData from '../../util/postData';
-import setAuthorizationToken from '../../util/setAuthorizationToken';
 import parseToken from '../../util/parseToken';
 import { setAuth } from '../../reducers/authReducer';
 import getData from '../../util/getData';
@@ -23,7 +22,6 @@ function GoogleButton() {
   const login = async (token) => {
     if (!localStorage.getItem('accessToken')) {
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     } else if (
@@ -32,7 +30,6 @@ function GoogleButton() {
     ) {
       localStorage.removeItem('accessToken');
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
       await Auth();
       !admin && (await addItemsToAccountCart());
     }

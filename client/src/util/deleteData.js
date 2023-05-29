@@ -1,13 +1,8 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
 async function deleteData(url) {
   try {
-    const response = await axios.delete(
-      `${process.env.REACT_APP_API_URL}${url}`,
-      {
-        withCredentials: true,
-      }
-    );
+    const response = await apiClient.delete(url);
     return response;
   } catch (error) {
     return error.response;

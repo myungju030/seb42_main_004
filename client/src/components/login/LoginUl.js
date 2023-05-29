@@ -6,7 +6,6 @@ import LoginButton from './LoginButton';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import parseToken from '../../util/parseToken';
 import { useDispatch, useSelector } from 'react-redux';
-import setAuthorizationToken from '../../util/setAuthorizationToken';
 import { setAuth } from '../../reducers/authReducer';
 import { setCart } from '../../reducers/cartReducer';
 import getData from '../../util/getData';
@@ -32,7 +31,7 @@ function LoginUl() {
   const login = async (token) => {
     if (!localStorage.getItem('accessToken')) {
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
+
       await Auth();
       !admin && (await addItemsToAccountCart());
     } else if (
@@ -41,7 +40,7 @@ function LoginUl() {
     ) {
       localStorage.removeItem('accessToken');
       localStorage.setItem('accessToken', token);
-      setAuthorizationToken(token);
+
       await Auth();
       !admin && (await addItemsToAccountCart());
     }

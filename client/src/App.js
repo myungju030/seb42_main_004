@@ -12,7 +12,6 @@ import getData from './util/getData';
 import parseToken from './util/parseToken';
 import checkFooter from './util/checkFooter';
 import useInitialize from './util/useInitialize';
-import setAuthorizationToken from './util/setAuthorizationToken';
 import Loading from './components/commons/Loading';
 const Cart = lazy(() => import('./pages/Cart'));
 const Login = lazy(() => import('./pages/Login'));
@@ -43,10 +42,6 @@ function App() {
   const initialize = useInitialize();
   const accessToken = localStorage.getItem('accessToken');
   const { pathname, search } = useLocation();
-
-  if (accessToken) {
-    setAuthorizationToken(accessToken);
-  }
 
   useEffect(() => {
     let logoutTimer;

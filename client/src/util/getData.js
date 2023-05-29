@@ -1,10 +1,8 @@
-import axios from 'axios';
+import apiClient from './apiClient';
 
 async function getData(url) {
   try {
-    const response = await axios.get(`${process.env.REACT_APP_API_URL}${url}`, {
-      withCredentials: true,
-    });
+    const response = await apiClient.get(url);
     return response.data;
   } catch (error) {
     return error.response;

@@ -1,6 +1,7 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Main from '../components/commons/Main';
 
 const Cart = lazy(() => import('../pages/Cart'));
 const Login = lazy(() => import('../pages/Login'));
@@ -39,6 +40,10 @@ export default function Router() {
       <Route path="/custom" element={<Custom />} />
       <Route path="/cart" element={<Cart />} />
       <Route
+        path="/cart/payment/:orderId"
+        element={isLogin ? <Payment /> : <Login />}
+      />
+      <Route
         path="/myinfo/orderhistory"
         element={isLogin ? <OrderHistory /> : <Login />}
       />
@@ -47,43 +52,36 @@ export default function Router() {
         path="/login"
         element={isLogin ? <Navigate to="/" /> : <Login />}
       />
-      <Route
-        path="/signup"
-        element={isLogin ? <Navigate to="/" /> : <Signup />}
-      />
-      <Route
-        path="/signup/oauth"
-        element={isLogin ? <Navigate to="/" /> : <SignupOauth />}
-      />
-      <Route
-        path="/signup/complete"
-        element={isLogin ? <Navigate to="/" /> : <SignupComplete />}
-      />
-      <Route path="/myinfo" element={isLogin ? <MyInfo /> : <Login />} />
-      <Route
-        path="/myinfo/edit"
-        element={isLogin ? <EditMyInfo /> : <Login />}
-      />
-      <Route
-        path="/myinfo/edit/password"
-        element={isLogin ? <EditPassword /> : <Login />}
-      />
-      <Route path="/email/complete" element={<CompleteEmail />} />
-      <Route path="/email/confirm" element={<ConfirmEmail />} />
-      <Route
-        path="/email/request"
-        element={isLogin ? <RequestEmail /> : <Login />}
-      />
-      <Route path="/email/send" element={<SendEmail />} />
-      <Route
-        path="/email/send/signup"
-        element={<SendEmail pathName="signup" />}
-      />
-      <Route path="/email/send/password" element={<FindPassword />} />
-      <Route
-        path="/cart/payment/:orderId"
-        element={isLogin ? <Payment /> : <Login />}
-      />
+      <Route path="/signup" element={<Main />}>
+        <Route path="" element={isLogin ? <Navigate to="/" /> : <Signup />} />
+        <Route
+          path="oauth"
+          element={isLogin ? <Navigate to="/" /> : <SignupOauth />}
+        />
+        <Route
+          path="complete"
+          element={isLogin ? <Navigate to="/" /> : <SignupComplete />}
+        />
+      </Route>
+      <Route path="/myinfo" element={<Main />}>
+        <Route path="" element={isLogin ? <MyInfo /> : <Login />} />
+        <Route path="edit" element={isLogin ? <EditMyInfo /> : <Login />} />
+        <Route
+          path="edit/password"
+          element={isLogin ? <EditPassword /> : <Login />}
+        />
+      </Route>
+      <Route path="/email" element={<Main />}>
+        <Route path="complete" element={<CompleteEmail />} />
+        <Route path="confirm" element={<ConfirmEmail />} />
+        <Route
+          path="request"
+          element={isLogin ? <RequestEmail /> : <Login />}
+        />
+        <Route path="send" element={<SendEmail />} />
+        <Route path="send/signup" element={<SendEmail pathName="signup" />} />
+        <Route path="send/password" element={<FindPassword />} />
+      </Route>
       <Route path="/*" element={<Error />} />
     </Routes>
   );

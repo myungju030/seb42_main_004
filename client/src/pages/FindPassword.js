@@ -55,7 +55,7 @@ function FindPassword() {
 
   return (
     <GetTemplate res="true" title="비밀번호 찾기">
-      <ContainerDiv className="margininside">
+      <ContainerMain className="margininside">
         <PasswordDiv>
           <div>
             <span>
@@ -86,14 +86,14 @@ function FindPassword() {
             <MyInfoButton onClick={handleClick} text="확인" />
           </div>
         </PasswordDiv>
-      </ContainerDiv>
+      </ContainerMain>
     </GetTemplate>
   );
 }
 
 export default FindPassword;
 
-const ContainerDiv = styled.div`
+const ContainerMain = styled.main`
   justify-content: center;
 `;
 const PasswordDiv = styled.div`

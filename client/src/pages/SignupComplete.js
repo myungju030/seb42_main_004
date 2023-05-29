@@ -1,16 +1,7 @@
-import styled from 'styled-components';
 import SignupCompleteDiv from '../components/signup/SignupCompleteDiv';
 
 function SignupComplete() {
-  return (
-    <ContainerDiv className="margininside">
-      <SignupCompleteDiv />
-    </ContainerDiv>
-  );
+  return <SignupCompleteDiv />;
 }
 
 export default SignupComplete;
-
-const ContainerDiv = styled.div`
-  justify-content: center;
-`;

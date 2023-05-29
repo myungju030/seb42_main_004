@@ -1,15 +1,13 @@
+import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
-import LoginUl from '../components/login/LoginUl';
 
-function Login() {
+export default function Main() {
   return (
     <ContainerMain className="margininside">
-      <LoginUl />
+      <Outlet />
     </ContainerMain>
   );
 }
-
-export default Login;
 
 const ContainerMain = styled.main`
   justify-content: center;

@@ -185,7 +185,7 @@ function Payment() {
 
   return (
     <GetTemplate isPending={isPending} error={error} res={res} title="결제하기">
-      <ContainerDiv className="margininside">
+      <ContainerMain className="margininside">
         <PaymentUl
           inputValue={inputValue}
           setInputValue={setInputValue}
@@ -199,13 +199,13 @@ function Payment() {
           buttonClick={handleClick}
           pathName="payment"
         />
-      </ContainerDiv>
+      </ContainerMain>
     </GetTemplate>
   );
 }
 
 export default Payment;
 
-const ContainerDiv = styled.div`
+const ContainerMain = styled.main`
   justify-content: space-between;
 `;

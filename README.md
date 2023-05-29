@@ -12,25 +12,17 @@
 
 <br/>
 
-## 📌 Contents
+## Contents
 
-- [👨‍💻 Team](#👨‍💻-team)
-  - [👩‍👧‍👧 Front-end](#👩‍👧‍👧-front-end)
-  - [👨‍👦‍👦 Back-end](#👨‍👦‍👦-back-end)
-- [📄 Pages](#📄-pages)
-  - [🍽 회원](#🍽-회원)
-  - [🍽 사용자](#🍽-사용자)
-  - [🍽 관리자](#🍽-관리자)
-  - [🍽 기타](#🍽-기타)
-- [📚 Documents](#📚-documents)
-- [⚙ Tech Stack](#⚙-tech-stack)
-- [🔗 Git](#🔗-git)
-  - [🌿 Branch](#🌿-branch)
-  - [💌 Commit Message](#💌-commit-message)
+- [👨‍💻 Team](#team)
+- [📄 Pages](#pages)
+- [📚 Documents](#documents)
+- [⚙ Tech Stack](#tech-stack)
+- [🔗 Git](#git)
 
 <br/>
 
-## 👨‍💻 Team
+## Team
 
 ### 👩‍👧‍👧 Front-end
 
@@ -50,7 +42,7 @@
 
 <br/>
 
-## 📄 Pages
+## Pages
 
 ### 🍽 회원
 
@@ -120,7 +112,7 @@
 
 <br/>
 
-## 📚 Documents
+## Documents
 
 📓 [서비스 메뉴얼](https://github.com/codestates-seb/seb42_main_004/files/11113725/SEB42_Main_004_.pdf)<br/>
 📕 [사용자 요구사항 정의서](https://github.com/codestates-seb/seb42_main_004/files/11113679/SEB42_Main_004_.pdf)<br/>
@@ -131,19 +123,19 @@
 📒 [개발자 테스트 체크리스트](https://docs.google.com/spreadsheets/d/16ytAkiKtmNh-2G7F7dsOAshTR7eL-YmNxBAPGBZoaZ4/edit?usp=sharing)<br/>
 <br/>
 
-## ⚙ Tech Stack
+## Tech Stack
 
-<div align =center>
+### 👩‍👧‍👧 Front-end
 
-| **Front-end** |                                                                                                                                                                                                                                                                                                                                                                                                                   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/Create React App-09D3AC?style=for-the-badge&logo=Create React App&logoColor=white"> <img src="https://img.shields.io/badge/eslint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white"> <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=black"> <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=ReactRouter&logoColor=white"> <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"> <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white">                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| **Back-end**  | <img src="https://img.shields.io/badge/java-F24E1E?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/SPRING DATA JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=for-the-badge&logo=Spring Security&logoColor=white"> <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=Gradle&logoColor=white"> <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEgMTAxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01Ny44IDI3LjIgNTcuNy4zaC0xNWwuMSAyNi45IDcuNSAxMC4zIDcuNS0xMC4zWk00Mi44IDczLjN2MjdoMTV2LTI3TDUwLjMgNjNsLTcuNSAxMC4zWiIvPjxwYXRoIGZpbGw9IiMwMEYyRTYiIGQ9Im01Ny44IDczLjMgMTUuOCAyMS44IDEyLjEtOC44LTE1LjgtMjEuOC0xMi4xLTMuOXYxMi43Wk00Mi44IDI3LjIgMjYuOSA1LjRsLTEyLjEgOC44TDMwLjYgMzZsMTIuMiAzLjlWMjcuMloiLz48cGF0aCBmaWxsPSIjMDBCOUYxIiBkPSJNMzAuNiAzNiA1IDI3LjcuNCA0MS45IDI2IDUwLjNsMTIuMS00TDMwLjYgMzZaTTYyLjQgNTQuMmw3LjUgMTAuMyAyNS42IDguMyA0LjYtMTQuMi0yNS42LTguMy0xMi4xIDMuOVoiLz48cGF0aCBmaWxsPSIjRDYzQUZGIiBkPSJtNzQuNSA1MC4zIDI1LjYtOC40LTQuNi0xNC4yTDY5LjkgMzZsLTcuNSAxMC4zIDEyLjEgNFpNMjYgNTAuMy40IDU4LjYgNSA3Mi44bDI1LjYtOC4zIDcuNS0xMC4zTDI2IDUwLjNaIi8+PHBhdGggZmlsbD0iI0ZCMDE1QiIgZD0iTTMwLjYgNjQuNSAxNC44IDg2LjNsMTIuMSA4LjggMTUuOS0yMS44VjYwLjZsLTEyLjIgMy45Wk02OS45IDM2bDE1LjgtMjEuOC0xMi4xLTguOC0xNS44IDIxLjh2MTIuN0w2OS45IDM2WiIvPjwvZz48L3N2Zz4=&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white"> <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white"> <img src="https://img.shields.io/badge/Amazon RDS-527FFF?style=for-the-badge&logo=Amazon RDS&logoColor=white"> |
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> <img src="https://img.shields.io/badge/Create React App-09D3AC?style=for-the-badge&logo=Create React App&logoColor=white"> <img src="https://img.shields.io/badge/eslint-4B32C3?style=for-the-badge&logo=ESLint&logoColor=white"> <img src="https://img.shields.io/badge/prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=black"> <img src="https://img.shields.io/badge/reactrouter-CA4245?style=for-the-badge&logo=ReactRouter&logoColor=white"> <img src="https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"> <img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white"> <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white">
 
-</div>
+### 👨‍👦‍👦 Back-end
+
+<img src="https://img.shields.io/badge/java-F24E1E?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/SPRING DATA JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white"> <img src="https://img.shields.io/badge/Spring Security-6DB33F?style=for-the-badge&logo=Spring Security&logoColor=white"> <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=Gradle&logoColor=white"> <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEgMTAxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01Ny44IDI3LjIgNTcuNy4zaC0xNWwuMSAyNi45IDcuNSAxMC4zIDcuNS0xMC4zWk00Mi44IDczLjN2MjdoMTV2LTI3TDUwLjMgNjNsLTcuNSAxMC4zWiIvPjxwYXRoIGZpbGw9IiMwMEYyRTYiIGQ9Im01Ny44IDczLjMgMTUuOCAyMS44IDEyLjEtOC44LTE1LjgtMjEuOC0xMi4xLTMuOXYxMi43Wk00Mi44IDI3LjIgMjYuOSA1LjRsLTEyLjEgOC44TDMwLjYgMzZsMTIuMiAzLjlWMjcuMloiLz48cGF0aCBmaWxsPSIjMDBCOUYxIiBkPSJNMzAuNiAzNiA1IDI3LjcuNCA0MS45IDI2IDUwLjNsMTIuMS00TDMwLjYgMzZaTTYyLjQgNTQuMmw3LjUgMTAuMyAyNS42IDguMyA0LjYtMTQuMi0yNS42LTguMy0xMi4xIDMuOVoiLz48cGF0aCBmaWxsPSIjRDYzQUZGIiBkPSJtNzQuNSA1MC4zIDI1LjYtOC40LTQuNi0xNC4yTDY5LjkgMzZsLTcuNSAxMC4zIDEyLjEgNFpNMjYgNTAuMy40IDU4LjYgNSA3Mi44bDI1LjYtOC4zIDcuNS0xMC4zTDI2IDUwLjNaIi8+PHBhdGggZmlsbD0iI0ZCMDE1QiIgZD0iTTMwLjYgNjQuNSAxNC44IDg2LjNsMTIuMSA4LjggMTUuOS0yMS44VjYwLjZsLTEyLjIgMy45Wk02OS45IDM2bDE1LjgtMjEuOC0xMi4xLTguOC0xNS44IDIxLjh2MTIuN0w2OS45IDM2WiIvPjwvZz48L3N2Zz4=&logoColor=white"> <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=for-the-badge&logo=Amazon EC2&logoColor=white"> <img src="https://img.shields.io/badge/Amazon S3-569A31?style=for-the-badge&logo=Amazon S3&logoColor=white"> <img src="https://img.shields.io/badge/Amazon RDS-527FFF?style=for-the-badge&logo=Amazon RDS&logoColor=white">
 
 <br/>
 
-## 🔗 Git
+## Git
 
 ### 🌿 Branch
 

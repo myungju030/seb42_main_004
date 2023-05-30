@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
 import ConfirmEmailDiv from '../components/signup/ConfirmEmailDiv';
 
 function CompleteEmail() {
@@ -19,15 +18,7 @@ function CompleteEmail() {
     };
   }, []);
 
-  return (
-    <ContainerDiv className="margininside">
-      <ConfirmEmailDiv pathName="complete" />
-    </ContainerDiv>
-  );
+  return <ConfirmEmailDiv pathName="complete" />;
 }
 
 export default CompleteEmail;
-
-const ContainerDiv = styled.div`
-  justify-content: center;
-`;
